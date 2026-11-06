@@ -1,0 +1,18 @@
+# Helix: downloaded grammar sources and compiled libraries.
+.config/helix/runtime/grammars
+.config/helix/runtime/grammars/**
+
+# Helix: local configuration/theme backups.
+.config/helix/theme-backups
+.config/helix/theme-backups/**
+.config/helix/**/*.bak
+
+# Neovim: generated parsers (current default and config-local installs).
+.local/share/nvim/site/parser
+.local/share/nvim/site/parser/**
+.config/nvim/parser
+.config/nvim/parser/**
+
+# Neovim: local logs, not configuration. Keep lazy-lock.json tracked.
+.config/nvim/.nvimlog
+.config/nvim/*.log

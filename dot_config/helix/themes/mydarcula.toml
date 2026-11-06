@@ -1,0 +1,11 @@
+inherits = "darcula-solid"
+
+"type"                       = { fg = "white", modifiers = ["italic"] }
+"type.builtin"               = { fg = "orange", modifiers = ["italic"] }
+"type.enum"                  = { fg = "white", modifiers = ["italic"] }
+"type.enum.variant"          = { fg = "orange", modifiers = ["italic"] }
+"type.parameter"             = { fg = "white", modifiers = ["bold"] }
+
+"namespace" = { fg = "purple" }
+"ui.picker.header.column" = { fg = "grey05", modifiers = ["bold"] }
+"ui.picker.header.column.active" = { fg = "grey05", bg = "grey03", modifiers = ["bold"] }

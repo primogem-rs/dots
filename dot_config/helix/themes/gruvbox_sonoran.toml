@@ -1,0 +1,98 @@
+# Balanced Gruvbox colors over Rex's Sonoran Dusk surfaces.
+# Preview in Helix with :theme gruvbox_sonoran
+inherits = "gruvbox_dark_hard"
+
+# Restore Gruvbox's distinct accents while keeping syntax less busy.
+# Punctuation, operators, parameters, and fields stay neutral.
+"attribute" = { fg = "aqua1", modifiers = [] }
+"comment" = { fg = "gray", modifiers = [] }
+"constant" = { fg = "purple1" }
+"constant.character" = { fg = "aqua1" }
+"constant.character.escape" = { fg = "yellow1" }
+"constant.macro" = { fg = "aqua1" }
+"constructor" = { fg = "yellow1" }
+"function" = { fg = "green1" }
+"function.builtin" = { fg = "green1" }
+"function.macro" = { fg = "green1" }
+"keyword" = { fg = "red1" }
+"keyword.control.import" = { fg = "aqua1" }
+"label" = { fg = "red1" }
+"module" = { fg = "fg1" }
+"operator" = { fg = "fg3" }
+"punctuation" = { fg = "fg3" }
+"special" = { fg = "purple1" }
+"string.regexp" = { fg = "yellow1" }
+"string.special" = { fg = "yellow1" }
+"string.symbol" = { fg = "yellow1" }
+"tag" = { fg = "aqua1" }
+"type" = { fg = "yellow1", modifiers = [] }
+"type.enum.variant" = { modifiers = [] }
+"variable.builtin" = { fg = "fg1", modifiers = [] }
+"variable.other.member" = { fg = "fg1" }
+"variable.parameter" = { fg = "fg1", modifiers = [] }
+"markup.italic" = { modifiers = [] }
+"markup.heading" = { fg = "aqua1" }
+"markup.link.text" = { fg = "red1" }
+"markup.raw" = { fg = "green1" }
+
+"ui.virtual.inlay-hint.type" = { fg = "gray", modifiers = [] }
+
+"ui.background" = { bg = "sonoran_background" }
+"ui.gutter" = { bg = "sonoran_background" }
+"ui.cursorline" = { bg = "sonoran_surface" }
+"ui.cursorline.primary" = { bg = "sonoran_surface" }
+"ui.cursor.match" = { fg = "fg3", bg = "sonoran_selection" }
+
+"ui.bufferline" = { fg = "fg1", bg = "sonoran_canvas" }
+"ui.bufferline.active" = { fg = "fg1", bg = "sonoran_selection" }
+"ui.bufferline.background" = { bg = "sonoran_canvas" }
+
+"ui.help" = { fg = "fg1", bg = "sonoran_raised" }
+"ui.popup" = { bg = "sonoran_raised" }
+"ui.menu" = { fg = "fg1", bg = "sonoran_raised" }
+"ui.menu.selected" = { fg = "fg1", bg = "sonoran_selection", modifiers = ["bold"] }
+"ui.menu.scroll" = { fg = "fg4", bg = "sonoran_surface" }
+
+"ui.selection" = { bg = "sonoran_selection_soft" }
+"ui.selection.primary" = { bg = "sonoran_selection" }
+"ui.highlight" = { bg = "sonoran_selection_soft" }
+
+"ui.statusline" = { fg = "fg1", bg = "sonoran_raised" }
+"ui.statusline.inactive" = { fg = "fg4", bg = "sonoran_canvas" }
+"ui.statusline.normal" = { fg = "fg1", bg = "sonoran_raised", modifiers = ["bold"] }
+"ui.statusline.insert" = { fg = "blue1", bg = "sonoran_raised", modifiers = ["bold"] }
+"ui.statusline.select" = { fg = "orange1", bg = "sonoran_raised", modifiers = ["bold"] }
+"ui.virtual.ruler" = { bg = "sonoran_surface" }
+"ui.window" = { fg = "sonoran_border", bg = "sonoran_background" }
+
+[palette]
+# Brighter than the muted variant, softer than original Gruvbox.
+fg0 = "#ecdfbd"
+fg1 = "#ded0ad"
+fg2 = "#cdbda0"
+fg3 = "#b9aa90"
+fg4 = "#a69882"
+gray = "#908374"
+red0 = "#b85345"
+red1 = "#df6350"
+green0 = "#929852"
+green1 = "#aeb453"
+yellow0 = "#b59a56"
+yellow1 = "#dfb158"
+blue0 = "#64928f"
+blue1 = "#87a89e"
+purple0 = "#a47b91"
+purple1 = "#c18b9b"
+aqua0 = "#7e9d78"
+aqua1 = "#94b68c"
+orange0 = "#b5783e"
+orange1 = "#df944e"
+
+# Sonoran Dusk's base background and derived UI surface shades.
+sonoran_canvas = "#171412"
+sonoran_background = "#171412"
+sonoran_surface = "#1e1b19"
+sonoran_raised = "#272422"
+sonoran_selection_soft = "#33281e"
+sonoran_selection = "#423528"
+sonoran_border = "#393430"

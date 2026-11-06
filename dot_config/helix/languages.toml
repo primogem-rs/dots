@@ -1,0 +1,51 @@
+[[language]]
+name = "rust"
+language-servers = [ "rust-analyzer" ]
+
+[language-server.rust-analyzer.config]
+check.command = "clippy"
+
+[language-server.rust-analyzer.config.completion.snippets.custom.ttfn]
+prefix = "ttfn"
+body = "#[tokio::test]\nasync fn ${1:feature}() {\n$0\n}"
+description = "tokio test"
+scope = "item"
+
+[language-server.rust-analyzer.config.completion.snippets.custom.ttmod]
+prefix = "ttmod"
+body = "#[cfg(test)]\nmod tests {\n\tuse super::*;\n\t#[tokio::test]\n\tasync fn ${1:test_name}() {\n\t\t$0\n\t}\n}"
+description = "tokio test mod"
+scope = "item"
+
+[[language]]
+name = "python"
+language-servers = [ "pyright", "ruff" ]
+
+[[language]]
+name = "go"
+language-servers = [ "gopls"]
+
+[[language]]
+name = "go"
+formatter = { command = "goimports", args = ["-local", "mydomain.com"] }
+
+[language-server.gopls]
+command = "gopls"
+config = { "gofumpt" = true, "semanticTokens" = true, "staticcheck" = true, "verboseOutput" = true, "analyses" = { "nilness" = true, unusedparams = true, unusedwrite = true, useany = true, "ST1000" = false, "ST1020" = false }, usePlaceholders = true, completeUnimported = true, hints = { "assignVariableTypes" = true, "compositeLiteralFields" = true, "compositeLiteralTypes" = true, "constantValues" = true, "functionTypeParameters" = true, "parameterNames" = true, "rangeVariableTypes" = true } }
+
+[language-server.zls]
+
+[language-server.deno-lsp]
+command = "deno"
+args = ["lsp"]
+
+[language-server.deno-lsp.config.deno]
+enable = true
+
+[[language]]
+name = "typescript"
+language-servers = ["deno-lsp"]
+
+[[language]]
+name = "javascript"
+language-servers = ["deno-lsp"]

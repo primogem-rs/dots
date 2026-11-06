@@ -1,0 +1,179 @@
+# Luna — a near-black theme with warm and cool accents.
+# Matched to the installed Neovim variant: https://github.com/WTFox/luna.nvim
+# Syntax follows Luna's Tree-sitter groups; UI follows its editor and lualine groups.
+
+"attribute" = "comment"
+"keyword" = "keyword"
+"keyword.directive" = "comment"
+"keyword.control" = "keyword"
+"keyword.control.import" = "grey_warm"
+"keyword.operator" = "grey_light"
+"namespace" = "grey_mid"
+
+"punctuation" = "grey_light"
+"punctuation.delimiter" = "grey_light"
+"punctuation.bracket" = "grey_light"
+"punctuation.special" = "grey_light"
+"operator" = "grey_light"
+"special" = "grey_light"
+
+"variable" = "fg"
+"variable.builtin" = "grey_light"
+"variable.parameter" = "silver"
+"variable.other.member" = "fg"
+
+"type" = "type"
+"type.builtin" = "keyword"
+"type.parameter" = "type"
+"type.enum.variant" = "type"
+"constructor" = "type"
+
+"function" = "func"
+"function.builtin" = "func"
+"function.method" = "func"
+"function.macro" = "keyword"
+"function.special" = "comment"
+
+"tag" = "type"
+"comment" = "comment"
+"string" = "string"
+"string.regexp" = "string"
+"string.special" = "grey_light"
+"string.special.symbol" = "type"
+"string.special.url" = { fg = "ok", underline = { style = "line" } }
+"constant" = "type"
+"constant.builtin" = "type"
+"constant.numeric" = "keyword"
+"constant.character" = "string"
+"constant.character.escape" = "signal"
+"label" = "keyword"
+
+"markup.heading" = "ok"
+"markup.heading.marker" = "grey_light"
+"markup.heading.1" = "silver"
+"markup.heading.2" = "grey_pale"
+"markup.heading.3" = "signal"
+"markup.heading.4" = "signal"
+"markup.heading.5" = "grey_light"
+"markup.heading.6" = "grey_light"
+"markup.list" = "signal"
+"markup.list.checked" = "ok"
+"markup.list.unchecked" = "func"
+"markup.bold" = { fg = "grey_light", modifiers = ["bold"] }
+"markup.italic" = { modifiers = ["italic"] }
+"markup.strikethrough" = { modifiers = ["crossed_out"] }
+"markup.link.url" = { fg = "ok", underline = { style = "line" } }
+"markup.link.label" = "grey_light"
+"markup.link.text" = "grey_light"
+"markup.quote" = "grey_light"
+"markup.raw" = "string"
+"markup.raw.inline" = { fg = "grey", bg = "surface" }
+"markup.raw.block" = { fg = "string", bg = "bg_alt" }
+
+# Diff backgrounds use the same blends as Luna's DiffAdd/Change/Delete/Text.
+# Keep gutter markers separate so the tint stays in the diff body.
+"diff.plus" = { fg = "ok", bg = "diff_add_bg" }
+"diff.minus" = { fg = "error", bg = "bg_delete" }
+"diff.delta" = { fg = "signal", bg = "diff_change_bg" }
+"diff.plus.gutter" = "ok"
+"diff.minus.gutter" = "error"
+"diff.delta.gutter" = "signal"
+
+"ui.background" = { fg = "fg", bg = "bg" }
+"ui.background.separator" = { fg = "border" }
+"ui.gutter" = { bg = "bg" }
+"ui.linenr" = { fg = "line_nr" }
+"ui.linenr.selected" = { fg = "silver" }
+"ui.statusline" = { fg = "fg_bright", bg = "bg" }
+"ui.statusline.inactive" = { fg = "grey", bg = "bg" }
+# Helix's select mode corresponds to Neovim's visual mode.
+"ui.statusline.normal" = { fg = "black", bg = "func", modifiers = ["bold"] }
+"ui.statusline.insert" = { fg = "black", bg = "type", modifiers = ["bold"] }
+"ui.statusline.select" = { fg = "black", bg = "grey_light", modifiers = ["bold"] }
+"ui.statusline.separator" = { fg = "border" }
+"ui.bufferline" = { fg = "grey_pale", bg = "black" }
+"ui.bufferline.active" = { fg = "ok", bg = "black" }
+"ui.bufferline.background" = { bg = "bg" }
+"ui.popup" = { fg = "fg", bg = "bg" }
+"ui.popup.info" = { fg = "grey_light", bg = "bg" }
+"ui.window" = { fg = "bg_alt" }
+"ui.help" = { fg = "fg", bg = "bg" }
+"ui.text" = { fg = "fg" }
+"ui.text.focus" = { fg = "fg", bg = "bg_alt" }
+"ui.text.inactive" = { fg = "grey" }
+"ui.text.info" = { fg = "grey_light" }
+"ui.text.directory" = { fg = "silver" }
+"ui.picker.header" = { fg = "grey", bg = "bg" }
+"ui.picker.header.column" = { fg = "grey" }
+"ui.picker.header.column.active" = { fg = "silver" }
+"ui.virtual" = { fg = "comment" }
+"ui.virtual.ruler" = { bg = "black" }
+"ui.virtual.whitespace" = { fg = "border" }
+"ui.virtual.indent-guide" = { fg = "surface" }
+"ui.virtual.inlay-hint" = { fg = "comment" }
+"ui.virtual.wrap" = { fg = "comment" }
+"ui.virtual.jump-label" = { fg = "white", bg = "error", modifiers = ["bold"] }
+"ui.selection" = { bg = "selection" }
+"ui.selection.primary" = { bg = "border" }
+"ui.cursor" = { fg = "bg", bg = "grey_light" }
+"ui.cursor.primary" = { fg = "bg", bg = "fg" }
+"ui.cursor.match" = { fg = "grey_light" }
+"ui.cursorline.primary" = { bg = "cursor_line" }
+"ui.cursorline.secondary" = { bg = "bg_alt" }
+"ui.cursorcolumn.primary" = { bg = "bg_alt" }
+"ui.highlight" = { fg = "fg_bright", bg = "bg_plum" }
+"ui.highlight.frameline" = { bg = "diff_change_bg" }
+"ui.menu" = { fg = "fg", bg = "bg" }
+"ui.menu.selected" = { fg = "fg", bg = "selection" }
+"ui.menu.scroll" = { fg = "border", bg = "bg" }
+"ui.debug.breakpoint" = { fg = "error" }
+"ui.debug.active" = { fg = "warning" }
+"tabstop" = { fg = "warning", bg = "selection" }
+
+"diagnostic" = { underline = { color = "warning", style = "curl" } }
+"diagnostic.error" = { underline = { color = "error", style = "curl" } }
+"diagnostic.warning" = { underline = { color = "warning", style = "curl" } }
+"diagnostic.info" = { underline = { color = "info", style = "curl" } }
+"diagnostic.hint" = { underline = { color = "hint", style = "curl" } }
+"diagnostic.unnecessary" = { fg = "keyword", underline = { color = "keyword", style = "curl" } }
+"diagnostic.deprecated" = { modifiers = ["crossed_out"] }
+
+error = "error"
+warning = "warning"
+info = "info"
+hint = "hint"
+
+[palette]
+bg = "#060606"
+bg_alt = "#1c1c1c"
+bg_plum = "#302028"
+bg_delete = "#40000a"
+cursor_line = "#212121"
+surface = "#333333"
+selection = "#384048"
+border = "#404040"
+# blend(grey_warm, 0.45, bg), matching Neovim's LineNr.
+line_nr = "#2f2b2b"
+grey_warm = "#605958"
+comment = "#7c7c7c"
+grey = "#888888"
+grey_mid = "#989898"
+grey_light = "#a8a8a8"
+grey_pale = "#b8b8b8"
+silver = "#c7c7c7"
+fg = "#e4e4e8"
+fg_bright = "#f0f0f0"
+black = "#000000"
+white = "#ffffff"
+keyword = "#e19067"
+func = "#75a1c7"
+type = "#c4a8d6"
+string = "#9eb38e"
+signal = "#c2916a"
+error = "#e08585"
+warning = "#d9a35a"
+info = "#8c9cb8"
+hint = "#b09080"
+ok = "#6fbe80"
+diff_add_bg = "#152017"
+diff_change_bg = "#191410"
